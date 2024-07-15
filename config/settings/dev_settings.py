@@ -7,8 +7,6 @@ DEBUG = bool(int(os.environ.get("DEBUG", default=0)))
 
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(",")
 
-# MIDDLEWARE = [val for val in MIDDLEWARE if val != "django.middleware.csrf.CsrfViewMiddleware"]
-
 DATABASES = {
     "default": {
         "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
