@@ -6,9 +6,6 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     APP_HOME=/app
 
-RUN mkdir $APP_HOME
-RUN mkdir $APP_HOME/staticfiles
-
 # Set the working directory in the container
 WORKDIR $APP_HOME
 
