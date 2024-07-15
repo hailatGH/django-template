@@ -7,6 +7,8 @@ DEBUG = bool(int(os.environ.get("DEBUG", default=0)))
 
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(",")
 
+MIDDLEWARE.pop("django.middleware.csrf.CsrfViewMiddleware")
+
 DATABASES = {
     "default": {
         "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
@@ -18,9 +20,7 @@ DATABASES = {
     }
 }
 
-CSRF_TRUSTED_ORIGINS = [
-    "http://*",
-]
+CSRF_TRUSTED_ORIGINS = ["http://localhost:2001"]
 
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
