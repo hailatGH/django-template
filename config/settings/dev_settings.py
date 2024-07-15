@@ -18,7 +18,7 @@ DATABASES = {
     }
 }
 
-CSRF_TRUSTED_ORIGINS = ["http://localhost:2001"]
+CSRF_TRUSTED_ORIGINS = ["http://localhost:2001", "http://localhost"]
 
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
